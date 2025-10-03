@@ -34,8 +34,5 @@ public abstract class AbstractEntity<T extends Serializable> implements Serializ
     @LastModifiedBy
     @Column(name = "updated_by")
     private String updatedBy;
-
-    @Column
-    private LocalDateTime deletedAt;
 }
 

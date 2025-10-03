@@ -38,7 +38,7 @@ public class InterfaceFileWriter {
         code.append("\tvoid delete").append(selectedEntity).append("ById(UUID id);\n\n");
 
         // Soft delete method
-        code.append("\tString softDelete").append(selectedEntity).append("(UUID id);\n\n");
+//        code.append("\tString softDelete").append(selectedEntity).append("(UUID id);\n\n");
 
         code.append("}");
         return code;

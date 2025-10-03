@@ -105,15 +105,15 @@ public class ServiceFileWriter {
         code.append("\t}\n\n");
 
         // Soft delete method
-        code.append("\t@Override\n");
-        code.append("\tpublic String softDelete").append(selectedEntity).append("(UUID id) {\n");
-        code.append("\t\t").append(selectedEntity).append(" entity = ").append(entityVarName).append("Repository.findById(id)\n");
-        code.append("\t\t\t.orElseThrow(() -> new EntityNotFoundException(\"").append(selectedEntity).append(" not found\"));\n");
-        code.append("\t\tentity.setDeletedAt(LocalDateTime.now());\n");
-        code.append("\t\t").append(entityVarName).append("Repository.save(entity);\n");
-        code.append("\t\treturn \"")
-                .append(selectedEntity).append(" with ID \" + id + \" has been soft deleted\";\n");
-        code.append("\t}\n");
+//        code.append("\t@Override\n");
+//        code.append("\tpublic String softDelete").append(selectedEntity).append("(UUID id) {\n");
+//        code.append("\t\t").append(selectedEntity).append(" entity = ").append(entityVarName).append("Repository.findById(id)\n");
+//        code.append("\t\t\t.orElseThrow(() -> new EntityNotFoundException(\"").append(selectedEntity).append(" not found\"));\n");
+//        code.append("\t\tentity.setDeletedAt(LocalDateTime.now());\n");
+//        code.append("\t\t").append(entityVarName).append("Repository.save(entity);\n");
+//        code.append("\t\treturn \"")
+//                .append(selectedEntity).append(" with ID \" + id + \" has been soft deleted\";\n");
+//        code.append("\t}\n");
 
         code.append("}\n");
         return code;

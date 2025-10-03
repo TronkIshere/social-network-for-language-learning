@@ -88,7 +88,7 @@ public class ControllerFileWriter {
         code.append("\t}\n\n");
 
         // Soft Delete Method
-        code.append("\t@PutMapping(\"/soft-delete/{id}\")\n");
+        /*code.append("\t@PutMapping(\"/soft-delete/{id}\")\n");
         code.append("\tpublic ResponseAPI<String> softDelete").append(selectedEntity).append("(@PathVariable UUID id) {\n");
         code.append("\t\t").append(StringUtils.lowerFirst(selectedEntity)).append("Service.softDelete").append(selectedEntity).append("(id);\n");
         code.append("\t\treturn ResponseAPI.<String>builder()\n");
@@ -96,7 +96,7 @@ public class ControllerFileWriter {
         code.append("\t\t\t.message(\"success\")\n");
         code.append("\t\t\t.data(\"success\")\n");
         code.append("\t\t\t.build();\n");
-        code.append("\t}\n");
+        code.append("\t}\n");*/
 
         code.append("}\n");
         return code;

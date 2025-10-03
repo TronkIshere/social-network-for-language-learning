@@ -209,15 +209,6 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public String softDelete(UUID userId) {
-        LocalDateTime deleteAt = LocalDateTime.now();
-        User user = getUserById(userId);
-        user.setDeletedAt(deleteAt);
-        userRepository.save(user);
-        return "User with ID " + userId + " has been delete at " + deleteAt;
-    }
-
-    @Override
     public UserResponse getCurrentUserFromRequest(HttpServletRequest httpServletRequest) {
         String jwt = jwtService.getJwtFromRequest(httpServletRequest);
 

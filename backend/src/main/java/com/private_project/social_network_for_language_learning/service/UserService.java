@@ -33,8 +33,6 @@ public interface UserService {
 
     UserResponse updateUser(UpdateUserRequest request);
 
-    String softDelete(UUID userId);
-
     UserResponse registerUser(UploadUserRequest request);
 
     VerifyOTPResponse sendLinkLocalOTPRequest(SendOTPRequest request);
