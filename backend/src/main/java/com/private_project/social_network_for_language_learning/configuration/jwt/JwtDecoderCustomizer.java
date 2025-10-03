@@ -31,7 +31,7 @@ import java.util.Objects;
 @Slf4j(topic = "JWT-DECODER")
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class JwtDecoderCustomizer implements JwtDecoder {
-    @Value("${security.jwt.secret}")
+    @Value("${spring.security.jwt.secret}")
     String secretKey;
     final UserProviderRepository userProviderRepository;
     final UserRepository userRepository;

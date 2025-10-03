@@ -40,7 +40,7 @@ import java.util.stream.Collectors;
 @Slf4j(topic = "JWT-SERVICE")
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class JwtServiceImpl implements JwtService {
-    @Value("${security.jwt.secret}")
+    @Value("${spring.security.jwt.secret}")
     String jwtSecret;
     final RedisService redisService;
     final UserRepository userRepository;
