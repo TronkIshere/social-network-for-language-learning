@@ -1,0 +1,74 @@
+spring:
+  application:
+    name: ${SPRING_APPLICATION_NAME}
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: ${DB_DRIVER}
+  jpa:
+    show-sql: ${HIBERNATE_SHOW_SQL}
+    hibernate:
+      ddl-auto: ${HIBERNATE_DDL_AUTO}
+      format_sql: true
+    properties:
+      hibernate:
+        dialect: ${HIBERNATE_DIALECT}
+        connection.provider_disables_autocommit: true
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
+  data:
+    redis:
+      host: ${REDIS_HOST}
+      port: ${REDIS_PORT}
+      username: ${REDIS_USERNAME}
+      password: ${REDIS_PASSWORD}
+      timeout: ${REDIS_TIMEOUT}
+  mail:
+    host: ${MAIL_HOST}
+    port: ${MAIL_PORT}
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    smtp:
+      auth: ${MAIL_SMTP_AUTH}
+      starttls:
+        enable: ${MAIL_SMTP_STARTTLS_ENABLE}
+    properties:
+      mail:
+        smtp:
+          auth: ${MAIL_SMTP_AUTH}
+          starttls:
+            enable: ${MAIL_SMTP_STARTTLS_ENABLE}
+            required: ${MAIL_SMTP_REQUIRED}
+          ssl:
+            protocols: ${MAIL_SSL_PROTOCOLS}
+            trust: ${MAIL_SSL_TRUST}
+          connectiontimeout: ${MAIL_CONNECTION_TIMEOUT}
+          timeout: ${MAIL_TIMEOUT}
+          writetimeout: ${MAIL_WRITE_TIMEOUT}
+  security:
+    jwt:
+      secret: ${JWT_SECRET}
+      expirationInMils: ${JWT_EXPIRATION}
+  shell:
+    interactive:
+      enabled: true
+    command:
+      script:
+        enabled: true
+  oauth2:
+    client:
+      registration:
+        google:
+          client-id: ${GOOGLE_CLIENT_ID}
+          client-secret: ${GOOGLE_CLIENT_SECRET}
+          scope: ${GOOGLE_SCOPE}
+          redirect-uri: ${GOOGLE_REDIRECT_URI}
+          authorization-grant-type: ${GOOGLE_AUTHORIZATION_GRANT_TYPE}
+          client-name: ${GOOGLE_CLIENT_NAME}
+
+server:
+  port: ${SERVER_PORT}
