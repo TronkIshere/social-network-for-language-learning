@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.private_project</groupId>
-	<artifactId>charitable_money_management</artifactId>
+	<artifactId>social-network-for-language-learning</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>charitable_money_management</name>
 	<description>Demo project for Spring Boot</description>
